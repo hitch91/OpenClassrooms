@@ -1,0 +1,684 @@
+/*----- On importe les polices -----*/
+@font-face{
+	font-family:"Roboto-Regular";
+	src:url('../fonts/Roboto-Regular.ttf');
+	font-family: "Roboto-Black";
+	src:url('../fonts/Roboto-Black.ttf');
+}
+
+/*----- Règles par défaut -----*/
+body
+{
+	font-family:Roboto-Regular, Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:70px 0 0 0;
+}
+p,li,.txt1
+{
+	color:#555555;
+}
+.titre2
+{
+	color: black;
+}
+/********************   HEADER   *****************/
+
+.container
+{
+	max-width:1200px;
+	margin:0 auto;
+}	
+header 
+{
+	z-index: 50;
+	position: fixed;
+	top: 0;
+	width: 100%;
+    background-color: white;
+}
+
+
+.header_container 
+{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+nav ul li
+{
+	display:inline-block;
+	line-height:95px;
+	border-top:3px solid #fff;
+	margin-right:-4px;
+	padding:0 15px;
+	cursor:pointer;
+}
+
+nav ul li:hover, nav ul li.active
+{
+	border-top-color:#5CB0C1;
+	color: black;
+}
+
+/*******   Media queries  *******/
+
+@media screen and (max-width: 860px) 
+{
+    header 
+    {
+		height: 144px;
+	}
+	body
+	{
+		width: 100%;
+	}
+	boxed-small 
+	{
+       width: 80%;
+       margin: auto;
+    }
+    #services img
+    {
+    	width: 100%;
+    	margin-top: 2%;
+    }
+    .header_container
+    {
+    	flex-direction: column;
+    	margin-top: 15px;
+    }
+    nav ul li
+    {
+    	padding: 0 7px;
+    	line-height: 50px;
+        margin-top: 15px;
+    }
+    #slider
+    {
+    	margin-top: 74px;
+    }
+    #services ul li
+	{
+        margin-top: 15px;
+    }
+    #services img
+    {
+    	margin: auto;
+    }
+    #main-title
+    {
+    	font-size: 60%;
+    }
+    .responsive_services
+	{
+		display: flex;
+	}
+	.flexbox1
+	{
+       flex-direction: column;       
+	}
+	form
+	{
+		margin-right: -150px;
+		margin-top:98px
+	}
+	.tabs
+    {
+        overflow: hidden;
+        top: 25px;
+    }
+	.tab label 
+    {
+		width: 55px;
+		padding: 5px;
+		font-size: 0.7em;
+	}
+}    
+
+/*----- CARROUSSEL -----*/
+
+#slider
+{
+	overflow: hidden;
+	max-width: none;
+	width: 100%;
+	position: relative;
+}
+#slider figure
+{
+	position: relative;
+	width: 200%;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	left:0;
+	text-align: left;
+	animation: 15s slidy infinite;
+}
+#slider figure img
+{
+	width: 50%;
+	height:auto;
+	float: left;
+}
+@keyframes slidy 
+{
+  0% { left: 0%; }
+  40% {left: 0%; }
+  50% { left: -100%; }
+  90% { left: -100%; }
+} 
+
+.chevron--droite 
+{
+   padding: 1.5% 3% 1.5% 1%;
+   right: -2.5%;
+   z-index: 1;
+}
+
+.chevron--gauche 
+{
+   padding: 1.5% 1% 1.5% 3%;
+   left: -2.5%;
+   z-index: 5;
+}
+
+.chevron
+{
+   position: absolute;
+   background: rgba(0,0,0,0.2);
+   display: block;
+   top:45%;
+   border-radius: 50%;
+   color: white;
+   font-size: 23px;
+}
+
+#main-title 
+{
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 7%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+#main-title h1,p
+{
+	color:white;
+	margin: 7px;
+}
+.company-name 
+{ 
+	color: #5cadd3
+}
+
+/*----- NOS SERVICES -----*/
+
+.boxed-small
+{
+  width: 49%;
+  margin:auto;
+  padding: 20px;
+}
+.responsive_services
+{
+	display: flex;
+}
+.flexbox1
+{
+  display:flex;
+  margin-top: 20px;
+}
+
+#services ul
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ; 
+}
+
+#services ul li
+{
+  font-size: 13px;
+  list-style-type:none;
+}
+
+#services img
+{
+   margin-top: 2%;
+   max-width: 510px;
+   max-height: 319px;
+}
+
+.titre1
+{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-top: 100px;
+  font-family: "Roboto-Black"
+  
+}
+.titre2
+{
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: "Roboto-Black"
+}
+.trait
+{
+  width: 140px;
+  height: 1px;
+  background-color: #ccc;
+  opacity: .7;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.rond
+{
+  position: relative;
+  width: 13px;
+  height: 13px;
+  background-color: #5daacf;
+  margin: auto;
+  margin-top: -11px;
+  border-radius: 50%;
+  border: 5px solid white
+}
+
+.txt1
+{
+	text-align: center;
+	font-size: 13px;
+}
+
+
+.services .service_icon 
+{
+	position: relative;
+	margin-right: 4%;
+}
+.services .service_icon i:first-child 
+{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 65px;
+	vertical-align: center;
+	padding: 0;
+	font-size: 1.6em;
+	color: #5CADD3;
+	border: solid #D7D7D7 1px;
+}
+.services .service_icon i.fa-circle 
+{
+	position: absolute;
+	top: calc(50% - 10px);
+	left: calc(100% - 10px);
+	border-radius: 50%;
+	color: #5CADD3;
+	background-color: white;
+	border: solid white 2px;
+}
+
+
+/*----- PORTFOLIO -----*/
+
+.tabs 
+{
+	position: relative;
+	width: 100%;
+	padding-top: 60px;
+    margin: auto;
+    margin-top: 40px;
+}
+.tab
+{
+    height: 100%;
+    max-width: 1690px;
+    margin: auto;
+}
+
+/* tab labels/inputs (utilisation des onglets) */
+.tab label 
+{
+	display: block;
+	position: absolute;
+	top:0;
+	width: 80px;
+	padding: 10px;
+	overflow: visible;
+	z-index: 3;
+	text-align: center;
+	transition: all 0.3s ease-out;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+}
+.tab label:hover 
+{
+	cursor: pointer;
+}
+/* label (placement boutons) horizontal center align */
+.tab label[for=tab1] 
+{
+	left: calc(50% - 200px);
+}
+.tab label[for=tab2] 
+{
+	left: calc(50% - 100px);
+}
+.tab label[for=tab3] 
+{
+	left: 50%;
+}
+.tab label[for=tab4] 
+{
+	left: calc(50% + 100px);
+}
+/* placement de la petite fleche */
+.tab label i 
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -14px;
+	font-size: 1.4em;
+}
+/* label borders radius depend du label de positionnement de base = first and last)  */
+.tabs div:first-child label 
+{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.tabs div:last-child label 
+{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+/* cache le bouton pour les label ("All Works", "Creative", etc...) */
+.tab input[type=radio] 
+{
+	display: none;
+}
+.tab .list-projet 
+{
+	width: 100%;
+}
+/* style du label quand on clic dessus */
+input[type=radio]:checked ~ label 
+{
+	z-index: 2;
+	border-top: none;
+}
+input[type=radio]:not(:checked) ~ label i 
+{
+	display: none;
+}
+/* display content quand le label est selectionne */
+input[type=radio]:checked ~ label ~ .list-projet 
+{
+	z-index: 1;
+}
+/* hide content quand le label n'est pas selectionne */
+input[type=radio]:not(:checked) ~ label ~ .list-projet
+{
+	display: none;
+}
+/* projects list */
+#portfolio ul.flex-projet
+{
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	margin-right: 30px;
+}
+/* project text */
+.projet_description h4,
+.projet_description p 
+{
+	position: relative;
+	margin: 0;
+    /*transition effet slide */
+	transition: all .9s ease;
+		-webkit-transition: all .9s ease;
+		-moz-transition: all .9s ease;
+		-o-transition: all .9s ease;
+}
+.projet_description h4 
+{
+    font-size: 1.2em; 
+    padding: 3% 0 0 3%;
+    letter-spacing: 0.05em;
+	font-weight: bold;
+}
+.projet_description p 
+{
+    font-size: 1em; 
+    padding-left: 4%;
+	left: 100%;
+}
+.projet:hover h4, 
+.projet:hover p 
+{
+	left: 0;
+}
+/* project item */
+.projet 
+{
+    position: relative;
+    max-width: 340px;
+    max-height: 230px;
+    margin: 15px 2%;
+    padding: 0;
+    overflow: hidden;
+}
+.projet > img 
+{
+	width: 100%;
+	vertical-align: top;
+}
+/* legende des images */
+.projet_description 
+{
+	position: absolute;
+	top: 250px;
+	height: 100%;
+	max-height: 150px;
+	width: 100%;
+	transition: all .9s ease;
+		-webkit-transition: all .9s ease;
+		-moz-transition: all .9s ease;
+		-o-transition: all .9s ease;
+	transition-delay: .1s;
+		-webkit-transition-delay: .1s;
+		-moz-transition-delay: .1s;
+		-o-transition-delay: .1s;
+	opacity: 0;
+}
+.projet:hover .projet_description,
+.projet:active .projet_description 
+{
+	top: 68%;
+	opacity: 1;
+}
+/* Icone de l'oeil */
+.eye_icon i 
+{
+	position: absolute;
+	width: 100%;
+}
+.projet_description i 
+{
+	position: absolute;
+	top: -20px;
+	left: 75%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+}
+.tab label 
+{
+	background: #E5E5E5;
+}
+.tab label:hover 
+{
+	cursor: pointer;
+}
+.tab label:active 
+{
+	background: #4494BB;
+}
+.tab label i 
+{
+	color: #468CAD;
+}
+/* cache le bouton pour les label ("All Works", "Creative", etc...) */
+.tab .list-projet 
+{
+	background-color: #F5F5F5;
+}
+/* style du label quand on clic dessus */
+input[type=radio]:checked ~ label 
+{
+	background-color: #5CADD3;
+	color: white;
+	border-bottom: solid 3px #468CAD;
+}
+input[type=radio]:not(:checked) ~ label 
+{
+	border-bottom: solid 3px #E5E5E5;
+}
+/* legende des images */
+.projet_description 
+{
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+}
+.eye_icon i 
+{
+	background-color: transparent;
+    color: white;
+}
+.projet_description i 
+{
+	background: #5CADD2;
+	border: solid white 2px;
+}
+.projet_description h4,
+.projet_description p 
+{
+	color: white;
+}
+#portfolio
+{
+  max-width: none;
+  background-color: #F5F5F5;
+  padding: 1px;
+}
+
+/*----- CONTACT -----*/
+
+#contact
+{
+  max-width: none;
+  position: relative;
+}
+#contact #map_overlay
+{
+  background-color: rgba(51, 132, 255, 0.2);
+}
+#contact iframe
+{
+	width: 100%;
+
+}
+#map_overlay 
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* pour passer au travers*/
+}
+form
+{
+	width: 300px;
+	right: 150px;
+	top: 75px;
+    position: absolute;
+    padding:30px 50px 20px 30px;   
+    background: rgba(250,250,250,0.8);
+    z-index: 5; 
+}
+input,textarea
+{
+	border-radius: 5px;
+	border: 1px solid #ccc;
+    font-size: 15px;
+    padding: 3px 10px;
+    width: 100%;
+}	
+input
+{
+	height: 28px;
+	margin-bottom: 10px;	
+}
+textarea
+{
+    height: 200px; 
+    margin-bottom: 5px;
+}
+.bouton_cliquable
+{
+    padding: 6px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #71ABCF;
+    border-radius: 3px;
+    color: white;
+    border-bottom: 2px solid #5A93B7;
+}
+h5
+{
+    font-size: 1.8em;
+    margin: -13px 0 0 0;
+}
+form p
+{
+    font-size: 16px;
+    color: dimgrey;
+    margin:10px 0;
+
+}
+
+/*---- CREDITS ----*/
+
+#credits
+{
+	max-width: none;
+}
+#credits p
+{
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 15px;
+    background-color: #55A0BC;
+    color: white;
+}
